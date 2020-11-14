@@ -1,0 +1,316 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500&display=swap');
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   color: black;
+   background-color: #f1f1f1;
+   text-align: center;
+   margin: 0px;
+}
+
+.name {
+   margin: auto;
+   width: 60%;
+   padding: 14px;
+   font-size: 13px;
+}
+.mooufo {
+   padding: 40px 20px 40px 20px;
+   font-weight: 400;
+   font-size: 1em;
+   color: #c9c9e4;
+}
+.logo:hover {
+    opacity: 0.8;
+    transition: .4s;
+}
+span:hover {
+   cursor: default;
+}
+* {
+  box-sizing: border-box;
+}
+.row {
+  margin: 10px -16px;
+}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default. idk why here */
+}
+/*If the browser window is 600px or smaller, the background color will be lightblue:*/
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Content */
+.content {
+   padding: 10px;
+   background-color: white;
+   height: 400px;
+   position: relative;
+}
+.content p {
+   font-size: 1em;
+   text-align: left;
+   font-weight: 200;
+   line-height: 1.5em;
+}
+/* The "show" class is added to the filtered elements */
+.show {display: block;}
+.content > img {
+   width: 100%;
+   height: 100%; /* change to 75% if i want  text */
+   object-fit: cover;
+   overflow: hidden;
+
+}
+.description {
+   margin: 0px 0px 20px 20px; /* top, r, bot, left. match .content's padding */
+   position: absolute; /* add position: relative; to .content */
+   bottom: 0px;
+   left: 0px;
+   color: white;
+   text-align: left;
+}
+.descript-title {
+   font-size: 16px;
+}
+.descript-text {
+   font-size: 13px;
+   padding-bottom: 3px;
+}
+.description a, .description a:visited {
+   color: white;
+   cursor: pointer;
+   text-decoration: none;
+}
+.description a:hover {
+   color: black;
+   transition: .4s;
+}
+.description button {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 11px;
+   color: white;
+   padding: 1px 2px 1px 2px;
+   text-transform: uppercase;
+   background: none;
+   margin-top: 10px;
+}
+#scrollTopBtn {
+   display: none; /* Hidden by default */
+   position: fixed; /* Fixed/sticky position */
+   bottom: 20px; /* Place the button at the bottom of the page */
+   right: 15px; /* Place the button 30px from the right */
+   z-index: 99; /* Make sure it does not overlap */
+   border: none;
+   outline: none;
+   background-color: rgba(0, 0, 0, 0.3);
+   color: white;
+   cursor: pointer; /* Add a mouse pointer on hover */
+   padding: 4px 11px 4px 11px;
+   border-radius: 50%;
+   font-size: 1.5em;
+}
+#scrollTopBtn:hover {
+background-color: rgba(0, 0, 0, 0.6); /* Add a dark-grey background on hover */
+}
+
+.blog
+   p {
+   line-height: 160%;
+   letter-spacing:1px;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 260px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+.sidenav button {
+   display: block;
+}
+#myBtnContainer button {
+   margin:auto;
+}
+/* Style page content */
+.main {
+ margin-top: -25px;
+ margin-left: 260px; /* Same as the width of the sidebar */
+}
+/* On smaller screens, where width is less than 450px, change the style of the sidebar */
+@media (max-width: 1400px) {
+  .column  {width: 50%;}
+}
+@media (max-width: 1100px) {
+.column {width: 100%;}
+}
+@media (max-width: 800px) {
+.column {width: 100%;}
+.sidenav {display: none;
+margin-left: 0px;}
+.main {margin-left: 0px;
+width: 100%;}
+}
+/* .tag is in filter.js  */
+
+button.tag {
+   text-transform: uppercase;
+   text-align: center;
+	letter-spacing: 1.8px;
+	color: #000000;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	padding-left: 10px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+   cursor: pointer;
+   background: none;
+   border: none;
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif;
+   margin: 20px; /* won't work b/c of margin: auto for #myBtnContainer */
+   vertical-align: middle;
+}
+.tag-column {
+   margin-top: -10px;
+   width: 80%;
+   margin-left: auto;
+  margin-right: auto;
+   padding: 5px;
+   height: 60px;
+   display: block;
+   border: 2px solid white;
+}
+button.tag:focus {
+outline: none;
+/*
+text-shadow: 0px 1px 0px rgba(255,255,255,.2), 0px -1px 0px rgba(0,0,0,.3);
+vertical-align: middle;
+*/
+}
+button.tag::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	z-index: -1;
+	will-change: width;
+	transform: rotate(1deg);
+	transform-origin: right top;
+	transition: width 0.4s ease-out;
+	background-repeat: no-repeat; /*creates a stripe effect if removed, and size changed to .1em*/
+	background-size: 100% 0.5em;/*creates a stripe effect if removed */
+	background-position: 0 88%;
+}
+button.tag:hover::before {
+	width: 0;
+	transition-duration: 0.4s;
+}
+button.tag:focus::before {
+   /* just other methods of removing content
+   content: 'OFF';
+   display: none;
+    visibility: hidden;
+    */
+    background: none;
+}
+.tag-c1:hover, .tag-c2:hover, .tag-c3:hover, .tag-c4:hover, .tag-c5:hover, .tag-c6:hover, .tag-c7:hover, .tag-c8:hover, .tag-c9:hover, .tag-c10:hover {
+   transition: .7s;
+}
+span.tag-link  {
+   font-size: 12px;
+   padding: 1px 3px 1px 3px;
+   text-transform: uppercase;
+}
+.tag-c1::before {background-image: linear-gradient(to top, #c6e2ff 100%, transparent 100%);}
+.tag-c1:hover, button.tag-c1:focus {color: #c6e2ff;}
+.tag-link-1 {border: 2px solid #c6e2ff;}
+
+.tag-c2::before {background-image: linear-gradient(to top, #ffc6e2 100%, transparent 100%);}
+.tag-c2:hover, button.tag-c2:focus {color: #ffc6e2;}
+.tag-link-2 {border: 2px solid #ffc6e2;}
+
+.tag-c3::before {background-image: linear-gradient(to top, #e2ffc6 100%, transparent 100%);}
+.tag-c3:hover, button.tag-c3:focus  {color: #e2ffc6;}
+.tag-link-3 {border: 2px solid #e2ffc6;}
+
+.tag-c4::before {background-image: linear-gradient(to top, #FFDAC1 100%, transparent 100%);}
+.tag-c4:hover, button.tag-c4:focus {color: #FFDAC1;}
+
+.tag-c5::before {background-image: linear-gradient(to top, #c7c6ff 100%, transparent 100%);}
+.tag-c5:hover, button.tag-c5:focus {color: #c7c6ff;}
+
+.tag-link-5 {border: 2px solid #c7c6ff;}
+
+.tag-c6::before {background-image: linear-gradient(to top, #ffffc6 100%, transparent 100%);}
+.tag-c6:hover, button.tag-c6:focus {color: #ffffc6;}
+.tag-link-6 {border: 2px solid #ffffc6;}
+
+.tag-c7::before {background-image: linear-gradient(to top, #FFE4E1 100%, transparent 100%);}
+.tag-c7:hover, button.tag-c7:focus {color: #FFE4E1;}
+.tag-link-7 {border: 2px solid #FFE4E1;}
+
+.tag-c8::before {background-image: linear-gradient(to top, #B5EAD7 100%, transparent 100%);}
+.tag-c8:hover, button.tag-c8:focus {color: #B5EAD7;}
+.tag-link-8 {border: 2px solid #B5EAD7;}
+
+.tag-c9::before {background-image: linear-gradient(to top, #F5E1FD 100%, transparent 100%);}
+.tag-c9:hover, button.tag-c9:focus {color: #F5E1FD;}
+.tag-link-9 {border: 2px solid #F5E1FD;}
+
+.tag-c10::before {background-image: linear-gradient(to top, #E0FEFE 100%, transparent 100%);}
+.tag-c10:hover, button.tag-c10:focus {color: #E0FEFE;}
+.tag-link-10 {border: 2px solid #E0FEFE;}
+
+/* start, callapsable menu */
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active2:after {
+  content: "\2212";
+  color: black;
+}
+.expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/* end, callapsable menu */
+
+.social > a {
+   text-transform: uppercase;
+   text-decoration: none;
+   color: black;
+   font-size: .9em;
+   line-height: 1.5em;
+   font-weight: 300;
+   letter-spacing: 3px;
+}
+
+.social-box {
+   margin-top: 20px;
+}

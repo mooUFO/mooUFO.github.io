@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+      <head>
+        <meta charset="utf-8">
+        <meta name="author" content="mooUFO">
+        <meta name="description" content="mooUFO a blog about cross-stitch, product reviews"><!-- Define a description of your web page-->
+        <meta name="keywords" content="mooUFO"> <!-- Define keywords for search engines.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!--bootstrap requires-->
+        <title>mooUFO</title>
+        <link rel="stylesheet" type="text/css" href="/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="/styles/social.css">
+        <link rel="stylesheet" type="text/css" href="/styles/scrollTopBtn.css">
+      <script defer src="/fontawesome/js/all.js"></script> <!--load all styles -->
+        <link rel="icon" href="/images/favicon/2.png" type="image/gif" sizes="32x32">
+
+        <style>
+        .grid {
+           display: grid;
+           font-size: 40px;
+           width: 100%;
+           background: LightGray;
+           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* auto-fit vs auto-fill */
+           grid-template-rows: repeat(7, 350px);
+           grid-gap: 10px;
+           overflow: hidden;
+           justify-items: center; /*https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items*/
+           align-items: center;
+        }
+        .grid img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+        .d1{background:LightSkyBlue;}
+        .d2{background:LightSalmon;}
+        .d3{background:PaleTurquoise;}
+        .d4 {background:LightPink; }
+        .d5 {background:PaleGreen; }
+        .d6 {background:PaleGreen; }
+           </style>
+       </head>
+       <body>
+         <button id='scrollTopBtn' onclick='topFunction()' title='Go to top'><i class='fas fa-angle-up'></i></button>
+<!--
+<div class='name'>
+   <span class='email'>Discord: mooUFO#6546</span>
+   <br>
+   <span class='email'>Email: HellomooUFO@gmail.com</span>
+</div>
+-->
+<div>
+   <a href='https://mooUFO.github.io/' target="_blank">
+      <img class="logo" src="/images/logo/1.png" alt="mooufo logo" width="150px" style="margin: 30px;">
+   </a>
+</div>
+
+<div class='index-menu'>
+   <a href="blog.html" target="_blank" class="index-menu-text">BLOG</a>
+   <a href="#" target="_blank" class="index-menu-text">SHOP</a>
+   <a href="#" target="_blank" class="index-menu-text">PORTFOLIO</a>
+</div>
+
+<div class='social-div'>
+   <a href="https://www.instagram.com/moo.ufo/" target="_blank">
+      <i class="fab fa-instagram"></i></a>
+   <a href="https://www.reddit.com/user/mooUFO/" target="_blank">
+      <i class="fab fa-reddit-alien"></i></a>
+   <a href="https://www.etsy.com/mooUFO/" target="_blank">
+   <i class="fab fa-etsy"></i></a>
+   <a href="https://www.facebook.com/mooUFO" target="_blank">
+      <i class="fab fa-facebook"></i></a>
+   <a href="https://www.pinterest.com/moo_UFO" target="_blank">
+      <i class="fab fa-pinterest"></i></a>
+   <a href="https://discord.gg/dMcrj7N" target="_blank">
+      <i class="fab fa-discord"></i></a>
+   <a href="https://www.twitch.tv/mooufo/" target="_blank">
+      <i class="fab fa-twitch"></i></a>
+   <a href="https://www.youtube.com/channel/UC9VRx1aYbAfhjTU8jrRrgJg/" target="_blank" style= "margin-right: 0px;">
+      <i class="fab fa-youtube"></i></a>
+</div>
+
+<div class="grid">
+   <div class="d1"><img src="/images/thumbnail/1.png" alt=""></div>
+   <div class="d2"><img src="/images/thumbnail/2.png" alt=""></div>
+   <div class="d3"><img src="/images/thumbnail/3.png" alt=""></div>
+   <div class="d4"><img src="/images/thumbnail/4.png" alt=""></div>
+   <div class="d5"><img src="/images/thumbnail/5.png" alt=""></div>
+   <div class="d6"><img src="/images/thumbnail/6.JPG" alt=""></div>
+</div>
+<!-- a page navigation, maybe use onclick javascript to hide and show posts or just create new pagesidk -->
+<script src="/scripts/scrollTopBtn.js"></script>
+<script src="/scripts/filter.js"></script> <!-- script must be near end of body to work-->
+
+</body>
+</html>
